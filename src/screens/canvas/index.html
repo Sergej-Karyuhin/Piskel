@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Simple Piskel-Clone</title>
+  <script src="https://kit.fontawesome.com/8757551082.js"></script>
+  <link rel="shortcut icon" type="image/png" href="https://www.piskelapp.com/static/resources/favicon.png">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="header row">
+    <h1 class="header__logo">New Piskel</h1>
+  </header>
+
+  <!-- MAIN -->
+  <main class="main row">
+
+    <!-- TOOLS -->
+    <div class="tools column">
+      <div class="tools__container">
+        <ul class="tools__wrapper row">
+          <li class="tools__item highlight_tool" toolAttribute="pen" title="Pen"><i class="fas fa-pen"></i></li>
+          <li class="tools__item" toolAttribute="color-picker" title="Color select"><i class="fas fa-eye-dropper"></i></li>
+          <li class="tools__item" toolAttribute="paint-bucket" title="Paint bucket"><i class="fas fa-fill-drip"></i></li>
+          <li class="tools__item" toolAttribute="eraser" title="Eraser"><i class="fas fa-eraser"></i></li>
+          <li class="tools__item" toolAttribute="fill-bucket" title="Paint all pixels of the same color"><i class="fas fa-paint-roller"></i></li>
+          <li class="tools__item" toolAttribute="stroke" title="Stroke"><i class="fas fa-slash"></i></li>
+        </ul>
+      </div>
+      <div class="tools__picker-container">
+        <input class="tools__picker-item secondary-color" type="color" id="secondary-color" name="secondary" value="#ff0000">
+        <input class="tools__picker-item primary-color" type="color" id="primary-color" name="primary" value="#0000ff">
+        <i class="fas fa-sync-alt" id="switch-colors"></i>
+      </div>
+    </div>
+
+    <!-- FRAMES -->
+    <div class="frames__wrapper">
+      <div class="frame__background">
+        <div class="frame__unit">
+          <div class="frame__item-button copy hide-button"><i class="fas fa-copy frame-button-icon"></i></div>
+          <div class="frame__item-button index">1</div>
+          <div class="frame__item-button trash hide-button"><i class="fas fa-trash-alt frame-button-icon"></i></div>
+          <div class="frame__item-button move-frame drag-item hide-button"><i class="fas fa-arrows-alt-v drag-item"></i>
+          </div>
+        </div>
+      </div>
+      <div class="frames__add-frames-button"><i class="fas fa-plus"></i>
+        <div>Add new frame</div>
+      </div>
+    </div>
+
+    <!-- CANVAS -->
+    <div class="canvas column" id="canvas__wrapper">
+      <div class="canvas__BG">
+        <canvas class="canvas__item" width="512" height="512"></canvas>
+        <canvas class="canvas__buffer" width="512" height="512"></canvas>
+      </div>
+    </div>
+
+    <!-- PREVIEW -->
+    <div class="preview column">
+      <div class="preview__window">
+        <div class="preview__background">
+          <div class="preview__item">
+            <i id="fullScreen" class="fas fa-external-link-square-alt" title=""></i>
+          </div>
+        </div>
+        <div class="preview__fps-container">
+          <div class="preview__fps-numbers" id="show-fps">10 FPS</div>
+          <input id="fps" class="fps" type="range" min="0" max="24" step="1" value="10">
+        </div>
+      </div>
+
+      <div class="download__button-container">
+        <a class="download__button apng__download" href="#" download="animated-image-png" title="Download PNG">
+          PNG
+        </a>
+        <a class="download__button download__gif" href="#" title="Download GIF">
+          GIF
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+</body>
+
+</html>

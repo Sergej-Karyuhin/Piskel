@@ -1,0 +1,242 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Titillium Web", "Roboto", "Open Sans";
+  font-weight: 400;
+  font-size: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+body {
+  background-color: #1d1d1d;
+  user-select:none;
+}
+
+input {
+  border: none;
+  background-image: none;
+  background-color: transparent;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+.header {
+  height: 38px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #2d2d2d;
+}
+
+.header__logo {
+  margin: auto auto;
+  color: gray;
+}
+
+/* MAIN */
+.main {
+  margin: 5px auto;
+}
+
+/* TOOLS */
+.tools {
+  display: flex;
+  justify-content: flex-start;
+  width: 100px;
+}
+
+.tools__wrapper {
+  margin: 5px auto;
+}
+
+.tools__item {
+  margin: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border: 3px solid;
+  border-color: #3a3a3a;
+  background-color: #3a3a3a;
+  cursor: pointer;
+}
+
+.tools__item:hover {
+  border-color: #444;
+  background-color: #444;
+}
+
+.tools__item i {
+  font-size: 24px;
+  color: #fff;
+}
+
+.highlight {
+  border-color: #ffd700;
+}
+
+.highlight:hover {
+  border-color: #ffd700;
+}
+
+.highlight_tool {
+  border-color: #ffd700;
+}
+
+.highlight_tool:hover {
+  border-color: #ffd700;
+}
+
+.tools__item .out-of-order {
+  color: #888888;
+}
+
+
+/* CANVAS */
+.canvas {
+  flex: 1;
+  background: rgb(160, 160, 160);
+}
+
+.canvas__BG {
+  position: relative;
+  margin: auto auto;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAV0lEQVRYCe2WMQ4AIAgD0bDwN/7/FUb9AR2Muhxr04QclDAyc1lTEdGoZlXV6so/W/cDkQYgAAFXOT3NufIzAghA4DsBVzm9fSe+E6ABCECAf4AdgAAENkFXF0Suev9HAAAAAElFTkSuQmCC)
+    repeat;
+}
+
+.canvas__item {
+  margin: 0 auto;
+  background: transparent;
+}
+
+.canvas__buffer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: auto;
+  background: transparent;
+}
+
+/* PREVIEW */
+.preview {
+  display: flex;
+  justify-content: flex-start;
+  width: 230px;
+}
+
+.preview__fps-container {
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(51, 51, 51);
+  width: 200px;
+  height: 27px;
+}
+
+.preview__background {
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+  align-self: center;
+  box-sizing: border-box;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAV0lEQVRYCe2WMQ4AIAgD0bDwN/7/FUb9AR2Muhxr04QclDAyc1lTEdGoZlXV6so/W/cDkQYgAAFXOT3NufIzAghA4DsBVzm9fSe+E6ABCECAf4AdgAAENkFXF0Suev9HAAAAAElFTkSuQmCC)
+    repeat;
+}
+
+.preview__item {
+  display: flex;
+  justify-content: flex-end;
+  width: 200px;
+  height: 200px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.preview__item i {
+  display: none;
+  margin: 7px 7px 0 0;
+  font-size: 22px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.preview__fps-numbers {
+  color: rgb(170, 170, 170);
+  font-size: 14px;
+}
+
+
+/* FULLSCREEN */
+.preview__item:fullscreen {
+  background-color: rgb(255, 255, 255);
+}
+.preview__item:-webkit-full-screen {
+  background-color: rgb(255, 255, 255);
+}
+.preview__item:-moz-full-screen {
+  background-color: rgb(255, 255, 255);
+}
+
+
+/* Download buttons */
+.download__button-container {
+  display: flex;
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+.download__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+  width: 100px;
+  height: 50px;
+  color: #fff;
+  font-size: 19px;
+  border: 3px solid;
+  border-color: #3a3a3a;
+  background-color: #3a3a3a;
+  cursor: pointer;
+}
+
+.download__button:hover {
+  border-color: #444;
+  background-color: #444;
+}
+
+.apng__download {
+  font-size: 18px;
+}
